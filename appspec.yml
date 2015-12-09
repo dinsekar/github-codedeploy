@@ -20,6 +20,5 @@ hooks:
     - location: scripts/webserver-stop.sh
     - location: scripts/delete-old-index.sh
   AfterInstall:
-    - location: scripts/reset_index_html.sh
     - location: scripts/webserver-start.sh
     - location: scripts/register_with_elb.sh
