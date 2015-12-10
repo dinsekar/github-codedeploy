@@ -6,4 +6,4 @@ instanceID=$(curl http://169.254.169.254/latest/meta-data/instance-id)
 
 aws autoscaling update-auto-scaling-group --auto-scaling-group-name Infra-LinuxWebASG-1DLOKFPYP9GUI --health-check-type ELB
 
-aws elb register-instances-from-load-balancer --load-balancer-name LinuxWebELB --instances $instanceID
+aws elb register-instances-with-load-balancer --load-balancer-name LinuxWebELB --instances $instanceID
